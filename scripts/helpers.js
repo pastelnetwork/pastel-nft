@@ -1,4 +1,5 @@
 const { ethers } = require("ethers");
+const { getContractAt } = require("@nomiclabs/hardhat-ethers/internal/helpers");
 
 const getEnvVariable = (key, defaultValue) => {
   if (process.env[key]) {
@@ -27,8 +28,19 @@ const getAccount = () => {
   );
 };
 
+const getContract = (contractName, hre) => {
+  const account = getAccount();
+  return getContractAt(
+    hre,
+    contractName,
+    getEnvVariable("CONTRACT_ADDRESS"),
+    account
+  );
+};
+
 module.exports = {
   getEnvVariable,
   getProvider,
   getAccount,
+  getContract,
 };
