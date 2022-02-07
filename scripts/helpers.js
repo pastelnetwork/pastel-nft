@@ -6,7 +6,8 @@ const getEnvVariable = (key, defaultValue) => {
     return process.env[key];
   }
   if (!defaultValue) {
-    throw `${key} is not defined and no default value was provided`;
+    console.error(`${key} is not defined and no default value was provided`);
+    return "";
   }
   return defaultValue;
 };
@@ -16,16 +17,13 @@ const getProvider = () => {
     return new ethers.providers.JsonRpcProvider();
   } else {
     return ethers.getDefaultProvider(getEnvVariable("NETWORK", "rinkeby"), {
-      alchemy: getEnvVariable("ALCHEMY_KEY"),
+      infura: getEnvVariable("INFURA_KEY"),
     });
   }
 };
 
 const getAccount = () => {
-  return new ethers.Wallet(
-    getEnvVariable("ACCOUNT_PRIVATE_KEY"),
-    getProvider()
-  );
+  return new ethers.Wallet(getEnvVariable("PRIVATE_KEY"), getProvider());
 };
 
 const getContract = (contractName, hre) => {
