@@ -97,3 +97,9 @@ npx hardhat mint --address <RECIPIENT_ADDRESS>
 
 - Copy transaction hash and go to https://www.ropsten.etherscan.io and search by hash.
   You can see the result of transaction through etherscan.
+
+- To mint all tokens(125 NFTs) once, you can run mintAll script.
+
+  ```shell
+  npx hardhat mintAll
+  ```
