@@ -15,6 +15,7 @@ npx hardhat node
 In other terminal, you should run deploy script.
 
 ```shell
+npx hardhat compile
 npx hardhat deploy
 ```
 
@@ -45,6 +46,7 @@ npx hardhat mint --address <RECIPIENT_ADDRESS>
 - Next, run the deploy script as following.
 
   ```shell
+  npx hardhat compile
   npx hardhat deploy
   ```
 
@@ -71,10 +73,10 @@ npx hardhat mint --address <RECIPIENT_ADDRESS>
 - Run mint script.
 
   ```shell
-  npx hardhat mint(--address <RECIPIENT_ADDRESS>)
+  npx hardhat mint
   ```
 
-  If you don't provide recipient address, it will be set to `OWNER_ADDRESS` in `.env` file.
+  The owner address will be set to `OWNER_ADDRESS` in `.env` file.
   It will output as following.
 
   ```
