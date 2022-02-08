@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  * Pigeon - a contract for my non-fungible Pigeons.
  */
 contract Pigeon is ERC721Tradable {
-    uint256 private constant MAX_SUPPLY = 125;
+    uint16 private constant MAX_SUPPLY = 125;
 
     constructor(address _proxyRegistryAddress)
         ERC721Tradable("Pigeon", "PSP", _proxyRegistryAddress)
@@ -23,8 +23,6 @@ contract Pigeon is ERC721Tradable {
         uint256 total = totalSupply();
         require(total < MAX_SUPPLY, "MintTransaction:  OVER_SUPPLY");
 
-        for (uint256 i = total; i < MAX_SUPPLY; i++) {
-            mintTo(_to);
-        }
+        mintTo(_to);
     }
 }
