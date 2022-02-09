@@ -26,14 +26,9 @@ const getAccount = () => {
   return new ethers.Wallet(getEnvVariable("PRIVATE_KEY"), getProvider());
 };
 
-const getContract = (contractName, hre) => {
+const getContract = (contractName, address, hre) => {
   const account = getAccount();
-  return getContractAt(
-    hre,
-    contractName,
-    getEnvVariable("CONTRACT_ADDRESS"),
-    account
-  );
+  return getContractAt(hre, contractName, address, account);
 };
 
 module.exports = {

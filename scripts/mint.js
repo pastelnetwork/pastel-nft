@@ -7,13 +7,18 @@ const ALL_PIGEON_OPTION = 2;
 
 const account = getAccount();
 const OWNER_ADDRESS = getEnvVariable("OWNER_ADDRESS");
+const FACTORY_CONTRACT_ADDRESS = getEnvVariable("FACTORY_CONTRACT_ADDRESS");
 
 task("mintOne", "Mints from the Pigeon contract").setAction(async function (
   taskArgs,
   hre
 ) {
   try {
-    const contract = await getContract("PigeonFactory", hre);
+    const contract = await getContract(
+      "PigeonFactory",
+      FACTORY_CONTRACT_ADDRESS,
+      hre
+    );
     const transactionResponse = await contract.mint(
       SINGLE_PIGEON_OPTION,
       OWNER_ADDRESS,
@@ -30,7 +35,11 @@ task("mintOne", "Mints from the Pigeon contract").setAction(async function (
 task("mintMulti", "Multiple mints from the Pigeon contract").setAction(
   async function (taskArgs, hre) {
     try {
-      const contract = await getContract("PigeonFactory", hre);
+      const contract = await getContract(
+        "PigeonFactory",
+        FACTORY_CONTRACT_ADDRESS,
+        hre
+      );
       const transactionResponse = await contract.mint(
         MULTIPLE_PIGEON_OPTION,
         OWNER_ADDRESS,
@@ -50,12 +59,16 @@ task("mintAll", "Mints all from the Pigeon contract").setAction(async function (
   hre
 ) {
   try {
-    const contract = await getContract("PigeonFactory", hre);
+    const contract = await getContract(
+      "PigeonFactory",
+      FACTORY_CONTRACT_ADDRESS,
+      hre
+    );
     const transactionResponse = await contract.mint(
       ALL_PIGEON_OPTION,
       OWNER_ADDRESS,
       {
-        gasLimit: 5000000,
+        gasLimit: 8000000,
       }
     );
     console.log(`Transaction Hash: ${transactionResponse.hash}`);
