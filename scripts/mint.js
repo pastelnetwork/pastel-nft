@@ -1,35 +1,65 @@
 const { task } = require("hardhat/config");
-const { getEnvVariable, getContract } = require("./helpers");
+const { getEnvVariable, getContract, getAccount } = require("./helpers");
 
-const MAX_SUPPLY = 125;
+const SINGLE_PIGEON_OPTION = 0;
+const MULTIPLE_PIGEON_OPTION = 1;
+const ALL_PIGEON_OPTION = 2;
 
-task("mint", "Mints from the Pigeon contract").setAction(async function (
+const account = getAccount();
+const OWNER_ADDRESS = getEnvVariable("OWNER_ADDRESS");
+
+task("mintOne", "Mints from the Pigeon contract").setAction(async function (
   taskArgs,
   hre
 ) {
-  const contract = await getContract("Pigeon", hre);
-  const transactionResponse = await contract.mint(
-    getEnvVariable("OWNER_ADDRESS"),
-    {
-      gasLimit: 5000000,
-    }
-  );
-  console.log(`Transaction Hash: ${transactionResponse.hash}`);
+  try {
+    const contract = await getContract("PigeonFactory", hre);
+    const transactionResponse = await contract.mint(
+      SINGLE_PIGEON_OPTION,
+      OWNER_ADDRESS,
+      {
+        gasLimit: 5000000,
+      }
+    );
+    console.log(`Transaction Hash: ${transactionResponse.hash}`);
+  } catch (error) {
+    console.log(error);
+  }
 });
 
-task("mintAll", "Mints all tokens from the Pigeon contract").setAction(
+task("mintMulti", "Multiple mints from the Pigeon contract").setAction(
   async function (taskArgs, hre) {
-    const contract = await getContract("Pigeon", hre);
-    const currentSupply = await contract.totalSupply();
-
-    for (let i = currentSupply; i < MAX_SUPPLY; i++) {
+    try {
+      const contract = await getContract("PigeonFactory", hre);
       const transactionResponse = await contract.mint(
-        getEnvVariable("OWNER_ADDRESS"),
+        MULTIPLE_PIGEON_OPTION,
+        OWNER_ADDRESS,
         {
           gasLimit: 5000000,
         }
       );
-      console.log(`Minted PSP: ${transactionResponse.hash}`);
+      console.log(`Transaction Hash: ${transactionResponse.hash}`);
+    } catch (error) {
+      console.log(error);
     }
   }
 );
+
+task("mintAll", "Mints all from the Pigeon contract").setAction(async function (
+  taskArgs,
+  hre
+) {
+  try {
+    const contract = await getContract("PigeonFactory", hre);
+    const transactionResponse = await contract.mint(
+      ALL_PIGEON_OPTION,
+      OWNER_ADDRESS,
+      {
+        gasLimit: 5000000,
+      }
+    );
+    console.log(`Transaction Hash: ${transactionResponse.hash}`);
+  } catch (error) {
+    console.log(error);
+  }
+});

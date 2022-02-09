@@ -65,15 +65,17 @@ npx hardhat mint --address <RECIPIENT_ADDRESS>
 
   For more details: https://docs.ethers.io/api-keys/
   ==========================
-  Contract deployed to address: 0x3850e686Fa91CEFb271422AB880FAE681F408451
+  NFT Contract deployed to address: 0x09635F643e140090A9A8Dcd712eD6285858ceBef
+  Factory Contract deployed to address: 0xc5a5C42992dECbae36851359345FE25997F5C42d
   ```
 
-- Copy the deployed contract address and input it to `CONTRACT_ADDRESS` in `.env` file.
+- Copy the deployed factory contract address and input it to `CONTRACT_ADDRESS` in `.env` file.
 
 - Run mint script.
 
   ```shell
-  npx hardhat mint
+  npx hardhat mintOne
+  npx hardhat mintMulti
   ```
 
   The owner address will be set to `OWNER_ADDRESS` in `.env` file.
