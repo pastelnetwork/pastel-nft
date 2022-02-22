@@ -14,6 +14,7 @@ contract Pigeon is ERC721Tradable {
     {}
 
     function baseTokenURI() public pure override returns (string memory) {
-        return "https://creatures-api.opensea.io/api/creature/";
+        return
+            "https://bafybeifxnc7jheq7rgof4pm5asnptsum64g7a7bfr6nb6pgrggly3fnhdy.ipfs.dweb.link/meta/";
     }
 }

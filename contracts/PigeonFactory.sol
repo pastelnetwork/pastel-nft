@@ -23,16 +23,16 @@ contract PigeonFactory is FactoryERC721, Ownable {
     /*
      * Enforce the existence of only 125 Pigeon NFTs.
      */
-    uint256 PIGEON_SUPPLY = 125;
+    uint256 constant PIGEON_SUPPLY = 100;
 
     /*
      * Three different options for minting Pigeons (basic, premium, and gold).
      */
     uint256 NUM_OPTIONS = 3;
-    uint256 SINGLE_PIGEON_OPTION = 0;
-    uint256 MULTIPLE_PIGEON_OPTION = 1;
-    uint256 ALL_PIGEON_OPTION = 2;
-    uint256 NUM_PIGEONS_IN_MULTIPLE_PIGEON_OPTION = 4;
+    uint256 constant SINGLE_PIGEON_OPTION = 0;
+    uint256 constant MULTIPLE_PIGEON_OPTION = 1;
+    uint256 constant ALL_PIGEON_OPTION = 2;
+    uint256 constant NUM_PIGEONS_IN_MULTIPLE_PIGEON_OPTION = 4;
 
     constructor(address _proxyRegistryAddress, address _nftAddress) {
         proxyRegistryAddress = _proxyRegistryAddress;
@@ -127,6 +127,10 @@ contract PigeonFactory is FactoryERC721, Ownable {
         returns (string memory)
     {
         return string(abi.encodePacked(baseURI, Strings.toString(_optionId)));
+    }
+
+    function setTokenURI(string memory _baseURI) public {
+        baseURI = _baseURI;
     }
 
     /**

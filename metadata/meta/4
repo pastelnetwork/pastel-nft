@@ -1,0 +1,38 @@
+{
+  "name": "Pastel Pigeon #4",
+  "description": "Looking Fly",
+  "background_color": "FE9200",
+  "attributes": [
+    {
+      "trait_type": "personality",
+      "value": "rockstar"
+    },
+    {
+      "trait_type": "gps_location",
+      "value": "the_apollo_theatre"
+    },
+    {
+      "trait_type": "intelligence",
+      "value": 8
+    },
+    {
+      "trait_type": "attitude",
+      "value": 8
+    },
+    {
+      "trait_type": "swagger",
+      "value": 9
+    },
+    {
+      "trait_type": "stamina_increase",
+      "display_type": "boost_percentage",
+      "value": 40
+    },
+    {
+      "trait_type": "flight_height",
+      "display_type": "boost_percentage",
+      "value": 70
+    }
+  ],
+  "image": "https://bafybeibyfrdje6pxhxrw3mpay3lzhs33yzg4fso2sqgmh3ddi7q6ywacce.ipfs.dweb.link/images/4.png"
+}

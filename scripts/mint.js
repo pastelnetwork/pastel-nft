@@ -7,6 +7,7 @@ const ALL_PIGEON_OPTION = 2;
 
 const account = getAccount();
 const OWNER_ADDRESS = getEnvVariable("OWNER_ADDRESS");
+const NFT_CONTRACT_ADDRESS = getEnvVariable("NFT_CONTRACT_ADDRESS");
 const FACTORY_CONTRACT_ADDRESS = getEnvVariable("FACTORY_CONTRACT_ADDRESS");
 
 task("mintOne", "Mints from the Pigeon contract").setAction(async function (
