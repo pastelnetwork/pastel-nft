@@ -77,3 +77,18 @@ task("mintAll", "Mints all from the Pigeon contract").setAction(async function (
     console.log(error);
   }
 });
+
+task("token-uri", "Fetches the token metadata for the given token ID")
+  .addParam("tokenId", "The tokenID to fetch metadata for")
+  .setAction(async function (taskArguments, hre) {
+    const contract = await getContract("Pigeon", NFT_CONTRACT_ADDRESS, hre);
+    const response = await contract.tokenURI(taskArguments.tokenId, {
+      gasLimit: 500_000,
+    });
+
+    const metadata_url = response;
+    console.log(`Metadata URL: ${metadata_url}`);
+
+    const metadata = await fetch(metadata_url).then(res => res.json());
+    console.log(`Metadata fetch response: ${JSON.stringify(metadata, null, 2)}`);
+  });
