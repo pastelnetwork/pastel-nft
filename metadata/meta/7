@@ -4,7 +4,7 @@
   "attributes": [
     {
       "trait_type": "background_color",
-      "value": "80FF00"
+      "value": "#80FF00"
     },
     {
       "trait_type": "personality",

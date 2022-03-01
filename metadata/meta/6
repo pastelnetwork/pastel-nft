@@ -4,7 +4,7 @@
   "attributes": [
     {
       "trait_type": "background_color",
-      "value": "EDE7FC"
+      "value": "#EDE7FC"
     },
     {
       "trait_type": "personality",
@@ -12,7 +12,7 @@
     },
     {
       "trait_type": "gps_location",
-      "value": "unique_square"
+      "value": "union_square"
     },
     {
       "trait_type": "intelligence",

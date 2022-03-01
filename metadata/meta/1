@@ -1,10 +1,12 @@
 {
   "name": "#1",
   "description": "Been Caught Stealing",
+  "color": "#99E1C8",
+  "background_color": "#99E1C8",
   "attributes": [
     {
       "trait_type": "background_color",
-      "value": "99E1C8"
+      "value": "#99E1C8"
     },
     {
       "trait_type": "personality",

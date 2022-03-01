@@ -1,10 +1,10 @@
 {
   "name": "#3",
-  "description": "This Sh**\\'s Fire",
+  "description": "This Sh\\*\\*'s Fire",
   "attributes": [
     {
       "trait_type": "background_color",
-      "value": "FDBE00"
+      "value": "#FDBE00"
     },
     {
       "trait_type": "personality",
