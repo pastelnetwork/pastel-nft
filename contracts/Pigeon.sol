@@ -9,12 +9,17 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  * Pigeon - a contract for my non-fungible Pigeons.
  */
 contract Pigeon is ERC721Tradable {
+    string public baseUri = "";
+
     constructor(address _proxyRegistryAddress)
         ERC721Tradable("Pigeon", "PSP", _proxyRegistryAddress)
     {}
 
-    function baseTokenURI() public pure override returns (string memory) {
-        return
-            "https://bafybeifxnc7jheq7rgof4pm5asnptsum64g7a7bfr6nb6pgrggly3fnhdy.ipfs.dweb.link/meta/";
+    function baseTokenURI() public view override returns (string memory) {
+        return baseUri;
+    }
+
+    function setBaseTokenURI(string memory _baseUri) public {
+        baseUri = _baseUri;
     }
 }
