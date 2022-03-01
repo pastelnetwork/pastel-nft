@@ -1,15 +1,18 @@
 {
-  "name": "Pastel Pigeon #4",
+  "name": "#4",
   "description": "Looking Fly",
-  "background_color": "FE9200",
   "attributes": [
+    {
+      "trait_type": "background_color",
+      "value": "FE9200"
+    },
     {
       "trait_type": "personality",
       "value": "rockstar"
     },
     {
       "trait_type": "gps_location",
-      "value": "the_apollo_theatre"
+      "value": "apollo_theatre"
     },
     {
       "trait_type": "intelligence",
@@ -34,5 +37,5 @@
       "value": 70
     }
   ],
-  "image": "https://bafybeibyfrdje6pxhxrw3mpay3lzhs33yzg4fso2sqgmh3ddi7q6ywacce.ipfs.dweb.link/images/4.png"
+  "image": "https://bafybeide7a73i5lsbxon4nsahuqhrpb5tlcxufpqi63v3ih3iqkdl6o7b4.ipfs.dweb.link/images/4.png"
 }

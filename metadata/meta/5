@@ -1,8 +1,11 @@
 {
-  "name": "Pastel Pigeon #5",
+  "name": "#5",
   "description": "Cash Me Outside",
-  "background_color": "4C053E",
   "attributes": [
+    {
+      "trait_type": "background_color",
+      "value": "4C053E"
+    },
     {
       "trait_type": "personality",
       "value": "bo$$_a$$_btch"
@@ -34,5 +37,5 @@
       "value": 60
     }
   ],
-  "image": "https://bafybeibyfrdje6pxhxrw3mpay3lzhs33yzg4fso2sqgmh3ddi7q6ywacce.ipfs.dweb.link/images/5.png"
+  "image": "https://bafybeide7a73i5lsbxon4nsahuqhrpb5tlcxufpqi63v3ih3iqkdl6o7b4.ipfs.dweb.link/images/5.png"
 }

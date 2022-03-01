@@ -1,8 +1,11 @@
 {
-  "name": "Pastel Pigeon #8",
+  "name": "#8",
   "description": "Art School Dropout",
-  "background_color": "FBF300",
   "attributes": [
+    {
+      "trait_type": "background_color",
+      "value": "FBF300"
+    },
     {
       "trait_type": "personality",
       "value": "rockstar"
@@ -34,5 +37,5 @@
       "value": 50
     }
   ],
-  "image": "https://bafybeibyfrdje6pxhxrw3mpay3lzhs33yzg4fso2sqgmh3ddi7q6ywacce.ipfs.dweb.link/images/8.png"
+  "image": "https://bafybeide7a73i5lsbxon4nsahuqhrpb5tlcxufpqi63v3ih3iqkdl6o7b4.ipfs.dweb.link/images/8.png"
 }

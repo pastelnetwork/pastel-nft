@@ -1,15 +1,18 @@
 {
-  "name": "Pastel Pigeon #7",
+  "name": "#7",
   "description": "Pizza Rat’s My Ex",
-  "background_color": "80FF00",
   "attributes": [
+    {
+      "trait_type": "background_color",
+      "value": "80FF00"
+    },
     {
       "trait_type": "personality",
       "value": "comedian"
     },
     {
       "trait_type": "gps_location",
-      "value": "the_comedy_cellar"
+      "value": "comedy_cellar"
     },
     {
       "trait_type": "intelligence",
@@ -34,5 +37,5 @@
       "value": 40
     }
   ],
-  "image": "https://bafybeibyfrdje6pxhxrw3mpay3lzhs33yzg4fso2sqgmh3ddi7q6ywacce.ipfs.dweb.link/images/7.png"
+  "image": "https://bafybeide7a73i5lsbxon4nsahuqhrpb5tlcxufpqi63v3ih3iqkdl6o7b4.ipfs.dweb.link/images/7.png"
 }

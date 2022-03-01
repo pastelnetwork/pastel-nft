@@ -1,8 +1,11 @@
 {
-  "name": "Pastel Pigeon #10",
+  "name": "#10",
   "description": "Google Tulip Mania",
-  "background_color": "FCF668",
   "attributes": [
+    {
+      "trait_type": "background_color",
+      "value": "FCF668"
+    },
     {
       "trait_type": "personality",
       "value": "new_yorker"
@@ -34,5 +37,5 @@
       "value": 60
     }
   ],
-  "image": "https://bafybeibyfrdje6pxhxrw3mpay3lzhs33yzg4fso2sqgmh3ddi7q6ywacce.ipfs.dweb.link/images/10.png"
+  "image": "https://bafybeide7a73i5lsbxon4nsahuqhrpb5tlcxufpqi63v3ih3iqkdl6o7b4.ipfs.dweb.link/images/10.png"
 }

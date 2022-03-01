@@ -1,8 +1,11 @@
 {
-  "name": "Pastel Pigeon #1",
+  "name": "#1",
   "description": "Been Caught Stealing",
-  "background_color": "99E1C8",
   "attributes": [
+    {
+      "trait_type": "background_color",
+      "value": "99E1C8"
+    },
     {
       "trait_type": "personality",
       "value": "rebel"
@@ -34,5 +37,5 @@
       "value": 60
     }
   ],
-  "image": "https://bafybeibyfrdje6pxhxrw3mpay3lzhs33yzg4fso2sqgmh3ddi7q6ywacce.ipfs.dweb.link/images/1.png"
+  "image": "https://bafybeide7a73i5lsbxon4nsahuqhrpb5tlcxufpqi63v3ih3iqkdl6o7b4.ipfs.dweb.link/images/1.png"
 }
