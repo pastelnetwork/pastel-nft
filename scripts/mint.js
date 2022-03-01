@@ -88,7 +88,14 @@ task("token-uri", "Fetches the token metadata for the given token ID")
 
     const metadata_url = response;
     console.log(`Metadata URL: ${metadata_url}`);
+  });
 
-    const metadata = await fetch(metadata_url).then(res => res.json());
-    console.log(`Metadata fetch response: ${JSON.stringify(metadata, null, 2)}`);
+task("set-base-token-uri", "Sets the token metadata")
+  .addParam("tokenUri", "The token uri to set metadata for")
+  .setAction(async function (taskArguments, hre) {
+    const contract = await getContract("Pigeon", NFT_CONTRACT_ADDRESS, hre);
+    const response = await contract.setBaseTokenURI(taskArguments.tokenUri, {
+      gasLimit: 500_000,
+    });
+    console.log(`Metadata set response: ${response}`);
   });

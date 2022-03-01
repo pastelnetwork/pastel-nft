@@ -25,7 +25,7 @@ task("deploy", "Deploys the Pastel Pigeon NFT/Factory contract").setAction(
       );
       console.log(`Factory Contract deployed to address: ${factory.address}`);
       await pigeon.transferOwnership(factory.address, {
-        gasLimit: 500000,
+        gasLimit: 1000000,
       });
       console.log("Transferred Ownership");
     } catch (error) {
