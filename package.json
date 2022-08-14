@@ -1,7 +1,7 @@
 {
   "name": "pastel-pigeon-nft",
   "dependencies": {
-    "@openzeppelin/contracts": "^4.4.2"
+    "@openzeppelin/contracts": "^4.7.2"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.4",
