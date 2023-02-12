@@ -13,6 +13,6 @@
     "hardhat": "^2.8.3",
     "hardhat-gas-reporter": "^1.0.7",
     "ipfs-car": "^0.6.2",
-    "solidity-coverage": "^0.7.18"
+    "solidity-coverage": "^0.8.2"
   }
 }
